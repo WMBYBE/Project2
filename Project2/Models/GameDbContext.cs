@@ -55,7 +55,7 @@ namespace Project2.Models
                     Developer = "Atlus",
                     MetaCritic = 94
                 }
-                );
+            );
         }
     }
 }

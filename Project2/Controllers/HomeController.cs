@@ -15,7 +15,7 @@ namespace Project2.Controllers
         }
         public IActionResult Index()
         {
-            var games = ctx.Games.OrderBy(c => c.Name).ToList();
+            var games = ctx.Games.OrderBy(g => g.Name).ToList();
             return View(games);
         }
     }

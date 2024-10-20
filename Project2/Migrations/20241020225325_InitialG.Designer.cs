@@ -12,7 +12,7 @@ using Project2.Models;
 namespace Project2.Migrations
 {
     [DbContext(typeof(GameDbContext))]
-    [Migration("20241020075233_InitialG")]
+    [Migration("20241020225325_InitialG")]
     partial class InitialG
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
