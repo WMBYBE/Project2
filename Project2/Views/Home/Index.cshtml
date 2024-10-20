@@ -1,0 +1,19 @@
+﻿model List<Game>
+    @{
+        ViewData["Title"] = "Home Page";
+    }
+
+    <table>
+        @foreach (Game g in Model)
+        {
+            <tr>
+                <td>@g.Name</td>
+                <td>@g.ReleaseDate</td>
+                <td>@g.Developer</td>
+                <td>@g.MetaCritic</td>
+                <td><a asp-route-id="@g.Id" asp-action="Edit">Edit</a> </td>
+                <td><a asp-route-id="@g.Id" asp-action="Delete">Delete</a> </td>
+            </tr>
+        }
+    </table>
+    <br />
