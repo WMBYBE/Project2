@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Game;
+@{
+}
+
+
+<form asp-action="Edit" method="Post">
+    <label asp-for="Name">Name</label><input type="text" asp-for="Name" />
+    <label asp-for="ReleaseDate">Release Date</label><input type="text" asp-for="ReleaseDate" />
+
+    <label asp-for="Developer">Developer</label><input type="text" asp-for="Developer" />
+
+    <label asp-for="MetaCritic">MetaCritic</label><input type="number" asp-for="MetaCritic" />
+    <button type="submit">Submit</button>
+    </form>
+
