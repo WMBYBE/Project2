@@ -2,18 +2,20 @@
     @{
         ViewData["Title"] = "Home Page";
     }
-    
-    <h1> 2024 RPGs</h1>
 
-    <table>
-        <tr>
-            <td>Name</td>
-            <td>Release Date</td>
-            <td>Developer</td>
-            <td>MetaCritic</td>
-            <td>Edit </td>
-            <td>Delete</td>
+    <h1 class ="display-3"> 2024 RPGs</h1>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+            <th scope="col"> Name</th>
+            <th scope="col">Release Date</th>
+            <th scope="col">Developer</th>
+            <th scope="col">MetaCritic Score</th>
+            <th scope="col">Edit </th>
+            <th scope="col">Delete</th>
         </tr>
+        </thead>
         @foreach (Game g in Model)
         {
            
@@ -26,6 +28,7 @@
                 <td><a asp-route-id="@g.Id" asp-action="Delete">Delete</a> </td>
         </tr>
     }
-</table>
-<br />
-<a asp-action="add">Click here to add a game</a>
+</table> 
+<br/>
+
+<a asp-action="add" class="btn btn-outline-success" role="button">Click here to add a game</a>

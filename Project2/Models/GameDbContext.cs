@@ -11,7 +11,7 @@ namespace Project2.Models
         public DbSet<Game> Games { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
+        { //Handles seeding the table with data
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Game>().HasData(
                 new Game
