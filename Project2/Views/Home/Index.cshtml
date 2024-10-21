@@ -3,7 +3,7 @@
         ViewData["Title"] = "Home Page";
     }
 
-    <h1 class ="display-3"> 2024 RPGs</h1>
+    <h3 class ="display-3"> 2024 RPGs</h3>
 
     <table class="table table-bordered table-striped">
         <thead class="table-dark">
@@ -24,11 +24,13 @@
                 <td>@g.ReleaseDate</td>
                 <td>@g.Developer</td>
                 <td>@g.MetaCritic</td>
-                <td><a asp-route-id="@g.Id" asp-action="Edit">Edit</a> </td>
-                <td><a asp-route-id="@g.Id" asp-action="Delete">Delete</a> </td>
+            @*Creates a warning styled button for each edit section that send the row to the GameForm*@
+            <td><a asp-route-id="@g.Id" asp-action="Edit" class="btn btn-warning" role="button">Edit</a> </td>
+            @*Creates a danger styled button for each delete section that deletes the row*@
+            <td><a asp-route-id="@g.Id" asp-action="Delete" class="btn btn-danger" role="button">Delete</a> </td> 
         </tr>
     }
 </table> 
 <br/>
 
-<a asp-action="add" class="btn btn-outline-success" role="button">Click here to add a game</a>
+<a asp-action="add" class="btn btn-success" role="button">Click here to add a game</a>

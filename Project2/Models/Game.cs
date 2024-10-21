@@ -1,4 +1,5 @@
-﻿namespace Project2.Models
+﻿//Game model for creating Game objects
+namespace Project2.Models
 {
     public class Game
     {
